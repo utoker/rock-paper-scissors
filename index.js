@@ -9,7 +9,6 @@
 // // Feel free to create more “helper” functions if you think it would be useful.
 
 // computerPlay = () => Math.floor(Math.random() * 3);
-function getRandomHand(){ return Math.floor(Math.random() * 3)};
 // function computerPlay(){
 //     if (parseInt(getRandomHand()) === 0) {
 //         return "rock"; }
@@ -20,22 +19,24 @@ function getRandomHand(){ return Math.floor(Math.random() * 3)};
 // }
 
 
+let game = {playerScore: 5, computerScore: 5};
+
+
 // 0 = rock, 1 == paper, 2 == scissors
-
-
+function getRandomHand(){ return Math.floor(Math.random() * 3)};
 // player plays rock
 playRock = () => {
-    // console.log(`computer played ${computerPlay()}`)             need to pick from single pull
-    if (getRandomHand()===0){return "draw";}
-    else if (getRandomHand()===1){return "player wins";}
-    else {return "computer wins";}}
+    if (getRandomHand()===0){return 0,"Computer played rock => draw"}
+    else if (getRandomHand()===1)[game.playerScore -- , game.status = "Computer played paper => player wins", console.log(game.playerScore),console.log(game.status)]
+    else {return 2,"Computer played scissors => computer wins";}}
 // player plays paper
 playPaper = () => {
-    if (computerPlay()=0){return "computer wins";}
-    else if (computerPlay()=1){return "draw";}
-    else {return "player wins"}}
+    if (computerPlay()=0){return "Computer played rock => computer wins";}
+    else if (computerPlay()=1){return "Computer played paper => draw";}
+    else {return 2,"Computer played scissors => player wins"}}
 // player plays scissors
 playScissors = () => {
-    if (computerPlay()=0){return "Player wins";}
-    else if (computerPlay()=1){return "Computer wins";}
-    else {return "draw";}}
+    if (computerPlay()=0){return "Computer played rock => Player wins";}
+    else if (computerPlay()=1){return "Computer played paper => Computer wins";}
+    else {return "Computer played scissors => draw";}}
+
