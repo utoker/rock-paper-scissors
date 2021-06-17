@@ -1,0 +1,20 @@
+.game {
+  display: flex;
+  width: 100vw;
+  height: 100vw;
+  background-color: turquoise;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-div {
+  width: 50vw;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 24px;
+}
