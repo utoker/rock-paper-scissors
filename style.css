@@ -1,12 +1,26 @@
 .game {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vw;
   background-color: turquoise;
   align-items: center;
   justify-content: center;
 }
-
+.score-board {
+  /* background-color: blueviolet; */
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+.event-board {
+  background-color: darkslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 40vw;
+}
 .buttons-div {
   width: 50vw;
   display: flex;
@@ -17,4 +31,7 @@
 
 .btn {
   font-size: 24px;
+}
+.new-game {
+  display: none;
 }
