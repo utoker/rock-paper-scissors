@@ -1,20 +1,25 @@
 .game {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: turquoise;
   align-items: center;
   justify-content: center;
 }
 .score-board {
   /* background-color: blueviolet; */
+
   width: 40vw;
   display: flex;
   justify-content: space-between;
 }
+.score-board span {
+  font-size: 32px;
+}
 .event-board {
   background-color: darkslategrey;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;

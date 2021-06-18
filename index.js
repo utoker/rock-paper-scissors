@@ -20,6 +20,11 @@ computerPlay = () => Math.floor(Math.random() * 3);
 function gameOver() {
   btnNewGame.style.display = "block";
   btn.forEach((btn) => (btn.style.display = "none"));
+  if (playerHP > 0) {
+    eventText.textContent = "VICTORY!";
+  } else {
+    eventText.textContent = "YOU ARE DEAD!";
+  }
 }
 function newGame() {
   btn.forEach((btn) => (btn.style.display = "block"));
