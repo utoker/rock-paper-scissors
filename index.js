@@ -26,6 +26,9 @@ function newGame() {
   btnNewGame.style.display = "none";
   playerHP = 100;
   computerHP = 100;
+  playerHPBar.textContent = `${playerHP}`;
+  computerHPBar.textContent = `${computerHP}`;
+  eventText.textContent = "Fight!";
 }
 function playRock() {
   if (computerPlay() === 0) {
@@ -34,10 +37,12 @@ function playRock() {
     eventText.textContent = "Computer played paper you lost";
     playerHP -= 20;
     playerHPBar.textContent = `${playerHP}`;
+    if (playerHP === 0) gameOver();
   } else {
     eventText.textContent = "Computer played scissors you won";
     computerHP -= 20;
     computerHPBar.textContent = `${computerHP}`;
+    if (computerHP === 0) gameOver();
   }
 }
 function playPaper() {
@@ -47,18 +52,26 @@ function playPaper() {
     eventText.textContent = "Computer played scissors you lost";
     playerHP -= 20;
     playerHPBar.textContent = `${playerHP}`;
+    if (playerHP === 0) gameOver();
   } else {
     eventText.textContent = "Computer played rock you won";
     computerHP -= 20;
     computerHPBar.textContent = `${computerHP}`;
+    if (computerHP === 0) gameOver();
   }
 }
 function playScissors() {
-  if (computerPlay() === 2) return console.log(`draw`);
-  else if (computerPlay() === 0) return console.log(`player lost`);
-  else {
+  if (computerPlay() === 2)
+    eventText.textContent = "Computer played scissors draw";
+  else if (computerPlay() === 0) {
+    eventText.textContent = "Computer played rock you lost";
+    playerHP -= 20;
+    playerHPBar.textContent = `${playerHP}`;
+    if (playerHP === 0) gameOver();
+  } else {
     eventText.textContent = "Computer played paper you won";
     computerHP -= 20;
     computerHPBar.textContent = `${computerHP}`;
+    if (computerHP === 0) gameOver();
   }
 }

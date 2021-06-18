@@ -34,4 +34,6 @@
 }
 .new-game {
   display: none;
+  font-size: 32px;
+  margin-top: 36px;
 }
